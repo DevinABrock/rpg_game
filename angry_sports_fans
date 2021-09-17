@@ -1,0 +1,95 @@
+# Angry Sport Fans
+
+##### Story
+#######################################
+print("""
+Story: 
+You are at a Falcons game and they are playing the Saints in their home town.
+The Saints are down by 45 and their fans are heated AF.
+You have downed 13 beers and now its time to pee.
+Good luck getting to the restrooms alive.
+""")
+
+player_name = input("What is your name sports fan: ")
+print(" ")
+
+print(f"""You stand up from your seat and carefully make your way through the stadium isle.
+You recive a few mean glances from Saints fans as you pass the last few people in the row.
+Finally, you have made your way to the stair case.
+
+\t{player_name} - Alright now where is the bathroom
+
+The stadium goes quit and a bright spotlight shines on you.
+Angry sports fans start to rise slowly from their seats all around you.
+
+\tCommentator - \"Ladies and gentlemen, it looks like {player_name} has to use the restroom.\"
+""")
+
+##### Status
+#######################################
+class Status():
+    player_hp = 20
+    player_atk = 4
+    enemy_hp = 8
+    enemy_atk = 5
+    sneak_atk = 20
+
+heart_symbol = u'\u2764'
+life = 10
+lives = heart_symbol * life
+
+
+##### Jeff Fight
+#######################################
+print("""A Saints fan falls from the sky and lands infront of you.
+
+Commentator - \"Ladies and gents, our first challenger has arrived.
+Lets hear a big round of applause for Jeff!
+
+Jeff - \"The Falcons Suck! Now Die!\"
+""")
+while Status.player_hp > 0 and Status.enemy_hp > 0:
+    print("What do you want to do?")
+    print("1. Hit him with a beer bottle")
+    print("2. Try to calm him down")
+    print("3. Try to run past him")
+    print("4. View Inventory")
+    print("> ", end=' ')
+    choice = input()
+    if choice == "1":
+        Status.enemy_hp -= Status.player_atk
+        print(f"{player_name} hit Jeff for {Status.player_atk} damage.")
+        if Status.enemy_hp <= 0:
+                print("Jeff falls over and rolls down the stairs.")
+        if Status.enemy_hp >= 0:
+            print(f"He now has {Status.enemy_hp} health remaining.")
+    elif choice == "2":
+        print(f"""
+        {player_name} - \" Hey Jeff can we do this later? I have to pee man.
+        
+        Jeff - \".........no\"
+        """)
+    elif choice == "3":
+        print(f"""
+        {player_name} - \" Hey Jeff can we do this later? I have to pee man.
+        
+        Jeff - \".........no\"
+        """)
+
+
+if enemy_hp > 0:
+            player_hp -= enemy_atk
+            print("You have been hi by the angry sports fan for {} damage.".format(goblin_power))
+            if hero_health <= 0:
+                print("You are dead.")
+
+
+
+
+
+
+
+
+
+
+
